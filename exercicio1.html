@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h4>Primeiro número : </h4>
+  <input id="num1">
+  <h4>Digite o segundo número:</h4>
+  <input id="num2">
+  <br><br>
+  <button id="calcular"> Calcular</button>
+  <p id="resultado"></p>
+</body>
+
+<script>
+//Efetue a função aqui....
+var btnCalcular = document.getElementById('calcular');
+// pega o elemento definido pelo id calcular e coloca na variável btnCalcular.
+var paragrafoResultado = document.getElementById('resultado');
+// pega o elemento definido pelo id resultado que é um paragrafo e 
+// que ainda não possuí nada e coloca na variável paragrafoResultado.
+
+btnCalcular.addEventListener('click', Somar);
+// cria um evento para o botão com id calcular para chamar a função Somar.
+
+//início da função para somar e mostrar o resultado no paragrafo
+function Somar() {
+    var n1 = document.getElementById('num1'); // pega o valor do input definido com id num1 e coloca na variável n1
+    var n2 = document.getElementById('num2'); // pega o valor do input definido com id num2 e coloca na variável n2
+    var rst = parseInt(n1.value) + parseInt(n2.value); 
+    // criação da variável rst e soma dos dois n1 e n2 transformando eles em inteiro
+    // também poderia transforma em float da seguinte maneira:
+    // var rst = parseFloat(n1.value) + parseFloat(n2.value); 
+    resultado.textContent = rst;
+    // Joga o valor do resultado na variável resultado que por sua vez é o paragrafo criado logo abaixo do botão
+}
+//fim função soma.
+</script>
+</html>
